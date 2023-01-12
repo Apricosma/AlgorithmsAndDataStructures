@@ -70,13 +70,15 @@
             }
         }
 
+        Console.WriteLine("Total number of unique words: " + uniqueCounter);
         Console.WriteLine("[{0}]", string.Join(", ", uniqueWords));
     }
 
     static void Main(string[] args)
     {
-        string test = "to be or not to be";
-        printUniqueWords(test);
+        Console.WriteLine("Input a set of words to check the total amount of unique words");
+        string uniqueWordString = Console.ReadLine().ToLower();
+        printUniqueWords(uniqueWordString);
 
         Console.WriteLine("Input a string to check if there are duplicates, and print all duplicates");
         string repeatCharactersString = Console.ReadLine();
