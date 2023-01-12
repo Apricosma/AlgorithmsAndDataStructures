@@ -74,14 +74,27 @@
         Console.WriteLine("[{0}]", string.Join(", ", uniqueWords));
     }
 
+    static void reverseString(string input)
+    {
+        char[] array = input.ToCharArray();
+        Array.Reverse(array);
+        Console.WriteLine(array);
+    }
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Input a set of words to check the total amount of unique words");
-        string uniqueWordString = Console.ReadLine().ToLower();
-        printUniqueWords(uniqueWordString);
+        // reverse string
+        Console.WriteLine("Input a string to reverse");
+        reverseString(Console.ReadLine());
 
+        // duplicate letters
         Console.WriteLine("Input a string to check if there are duplicates, and print all duplicates");
         string repeatCharactersString = Console.ReadLine();
         printDuplicates(repeatCharactersString);
+
+        // all unique words
+        Console.WriteLine("Input a set of words to check the total amount of unique words");
+        string uniqueWordString = Console.ReadLine().ToLower();
+        printUniqueWords(uniqueWordString);
     }
 }
