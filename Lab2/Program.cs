@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Metrics;
+using System.Text.RegularExpressions;
 
 class Program
 {
@@ -53,6 +54,10 @@ class Program
         // just make an array of strings and
         // check if it's not equal to each other
         string str = input;
+        Regex reg = new Regex("[*'\",_&#^@]");
+        str = reg.Replace(str, string.Empty);
+
+
         String[] strings = str.Split(" ");
         var uniqueWords = new List<string>();
         int uniqueCounter = 0;
