@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Diagnostics.Metrics;
+
+class Program
 {
     static void printDuplicates(string input)
     {
@@ -16,6 +18,7 @@
             // iterate the string again, comparing every letter against the
             // current iteration of letter
             // .. if f = a ... b ... c
+            // O(n^2) complexity :(
             foreach (char chars in str)
             {
                 // if match, flag count
@@ -46,6 +49,9 @@
 
     static void printUniqueWords(string input)
     {
+        // largely the same as printDuplicates()
+        // just make an array of strings and
+        // check if it's not equal to each other
         string str = input;
         String[] strings = str.Split(" ");
         var uniqueWords = new List<string>();
@@ -81,20 +87,54 @@
         Console.WriteLine(array);
     }
 
+    static void largestWord(string input)
+    {
+        // split input string into array of strings
+        string str = input;
+        String[] strings = str.Split(" ");
+        int count = 0;
+        string word = "";
+
+        // if the length of the current word is greater than
+        // the previous word .. then current word = biggest and count
+        // is updated to the length of the current word
+        foreach (string item in strings)
+        {
+            if (item.Length > count)
+            {
+                word = item;
+                count = item.Length;
+            }
+        }
+
+        Console.WriteLine("The biggest word is: " + word + ", with a length of: " + count);
+    }
+
     static void Main(string[] args)
     {
-        // reverse string
-        Console.WriteLine("Input a string to reverse");
-        reverseString(Console.ReadLine());
 
         // duplicate letters
         Console.WriteLine("Input a string to check if there are duplicates, and print all duplicates");
         string repeatCharactersString = Console.ReadLine();
         printDuplicates(repeatCharactersString);
 
+
         // all unique words
+        Console.WriteLine();
         Console.WriteLine("Input a set of words to check the total amount of unique words");
         string uniqueWordString = Console.ReadLine().ToLower();
         printUniqueWords(uniqueWordString);
+
+
+        // reverse string
+        Console.WriteLine();
+        Console.WriteLine("Input a string to reverse");
+        reverseString(Console.ReadLine());
+
+
+        // longest word
+        Console.WriteLine();
+        Console.WriteLine("Input a string of words to find the longest word");
+        largestWord(Console.ReadLine());
     }
 }
