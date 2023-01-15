@@ -79,6 +79,22 @@ class Program
         return result;
     }
 
+    // Given an integer, reverse the digits of that integer
+    static int reverseIntegerDigits(int value)
+    {
+        // convert int to array
+        // new array to store
+
+        // iterate backwards
+        for (int i = array.Length; i-- > 0;)
+        {
+
+        }
+
+        // convert temp array to integer
+        // return integer
+    }
+
     static void Main(string[] args)
     {
         int[] duplicatesArray = { 4, 3, 2, 7, 8, 13, 17, 20, 12, 20, 2, 3, 1 };
