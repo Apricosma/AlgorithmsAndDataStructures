@@ -7,6 +7,7 @@
         int maxVal = array.Max();
         int[] temp = new int[maxVal + 1];
 
+        Console.WriteLine("Repeating elements: ");
         // iterate the array once
         for (int i = 0; i < array.Length; i++)
         {
@@ -24,10 +25,35 @@
         }
     }
 
+    // Merge two sorted arrays and maintain sort
+    static void mergeArray(int[] arrayOne, int[] arrayTwo)
+    {
+        // get max length
+        int length;
+        if (arrayOne.Length >= arrayTwo.Length)
+        {
+            length = arrayOne.Length;
+        }
+        else
+        {
+            length = arrayTwo.Length;
+        }
+
+        // create new array
+        int[] result = new int[length];
+
+
+
+
+    }
 
     static void Main(string[] args)
     {
-        int[] myArray = { 4, 3, 2, 7, 8, 13, 17, 20, 12, 20, 2, 3, 1 };
-        getDuplicateIntegers(myArray);
+        int[] duplicatesArray = { 4, 3, 2, 7, 8, 13, 17, 20, 12, 20, 2, 3, 1 };
+        getDuplicateIntegers(duplicatesArray);
+
+        int[] mergeArrayOne = { 1, 2, 3, 4, 5 };
+        int[] mergeArrayTwo = { 2, 5, 7, 9, 13 };
+        mergeArray(mergeArrayOne, mergeArrayTwo);
     }
 }
