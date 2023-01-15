@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 class Program
 {
@@ -82,6 +81,7 @@ class Program
     }
 
     // Given an integer, reverse the digits of that integer
+    // O(n) complexity
     static int reverseIntegerDigits(int value)
     {
         // convert int to char array
