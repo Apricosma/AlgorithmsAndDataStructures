@@ -1,31 +1,25 @@
-﻿// Find the elements that appear twice in O(n) time
-
-using System.Drawing;
-
+﻿
 class Program
 {
-    static void printRepeating(int[] arr, int size)
+    // Find the elements that appear twice in O(n) time
+    static void getDuplicateIntegers(int []array)
     {
-        int[] count = new int[size];
-        int i;
+        // create a temporary array for comparison
+        int[] temp = new int[array.Length];
 
-        Console.Write("Repeating elements are ");
-        for (i = 0; i < size; i++)
+        // iterate the array once
+        for(int i = 0; i < array.Length; i++)
         {
-            if (count[arr[i]] == 1)
-                Console.Write(arr[i] + " ");
-            else
-                count[arr[i]]++;
+            // if element is flagged, print
+            
+            // else add flag
         }
     }
 
-    // driver code
-    public static void Main()
+    
+    static void Main(string[] args)
     {
-        int[] arr = { 4, 2, 4, 5, 2, 3, 1 };
-        int arr_size = arr.Length;
-
-        printRepeating(arr, arr_size);
+        int[] array = { 1, 2, 3, 4, 7, 9, 2, 4 };
+        getDuplicateIntegers(array);
     }
-
 }
