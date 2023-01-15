@@ -85,27 +85,35 @@ class Program
     // Given an integer, reverse the digits of that integer
     static int reverseIntegerDigits(int value)
     {
-        // convert int to array
-        // new array to store
+        // convert int to char array
+        string digitString = "";
+        string stringValue = value.ToString();
+        char[] chars = stringValue.ToCharArray();
 
-        // iterate backwards
-        for (int i = array.Length; i-- > 0;)
+        // iterate the char array backwards, and append chars to digitString
+        for (int i = chars.Length - 1; i >= 0; i--)
         {
-
+            digitString += chars[i];
         }
 
-        // convert temp array to integer
-        // return integer
+        // convert string back to Int32 for return
+        int result = Convert.ToInt32(digitString);
+
+        return result;
     }
 
     static void Main(string[] args)
     {
         int[] duplicatesArray = { 4, 3, 2, 7, 8, 13, 17, 20, 12, 20, 2, 3, 1 };
         getDuplicateIntegers(duplicatesArray);
+        Console.WriteLine();
 
         int[] mergeArrayOne = { 1, 2, 3, 4, 5 };
         int[] mergeArrayTwo = { 2, 5, 7, 9, 13, 16, 19 };
         int[] mergedSortedArray = mergeArray(mergeArrayOne, mergeArrayTwo);
         Console.WriteLine($"Merged sorted array is: {string.Join(" ", mergedSortedArray)}");
+
+        Console.WriteLine();
+        Console.WriteLine($"The reversed integer is: {reverseIntegerDigits(123456)}");
     }
 }
