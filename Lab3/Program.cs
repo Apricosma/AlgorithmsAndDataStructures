@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System;
+
+class Program
 {
     // Find the elements that appear twice in O(n) time
     static void getDuplicateIntegers(int[] array)
@@ -78,6 +80,22 @@
         }
 
         return result;
+    }
+
+    // Given an integer, reverse the digits of that integer
+    static int reverseIntegerDigits(int value)
+    {
+        // convert int to array
+        // new array to store
+
+        // iterate backwards
+        for (int i = array.Length; i-- > 0;)
+        {
+
+        }
+
+        // convert temp array to integer
+        // return integer
     }
 
     static void Main(string[] args)
