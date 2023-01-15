@@ -25,26 +25,59 @@
         }
     }
 
-    // Merge two sorted arrays and maintain sort
-    static void mergeArray(int[] arrayOne, int[] arrayTwo)
+    // Merge two sorted arrays and maintain sort in O(n)
+    static int[] mergeArray(int[] arrayOne, int[] arrayTwo)
     {
-        // get max length
-        int length;
-        if (arrayOne.Length >= arrayTwo.Length)
-        {
-            length = arrayOne.Length;
-        }
-        else
-        {
-            length = arrayTwo.Length;
-        }
-
         // create new array
-        int[] result = new int[length];
+        int[] result = new int[arrayOne.Length + arrayTwo.Length];
 
+        // indexes of all arrays
+        int i = 0;
+        int j = 0;
+        int k = 0;
 
+        // while loop through array until one of the arrays is less than their respective length
+        while (i < arrayOne.Length && j < arrayTwo.Length)
+        {
 
+            // if index of i is less than index of j
+            // index of result is assigned to the current index value of i
+            if (arrayOne[i] <= arrayTwo[j])
+            {
+                result[k] = arrayOne[i];
+                i++;
+            }
+            else
+            {
+                // otherwise index of result is assigned to the index value of j
+                result[k] = arrayTwo[j];
+                j++;
+            }
+            k++;
+        }
 
+        // there may be remaining elements after the above while loop terminates
+        // in which, we check each individual array for remaining elements buy using
+        // the remaining indecies
+
+        // in this specific example, the above while will terminate when i reaches index 4
+        // leaving index j 5 and 6 of arrayTwo
+        while (i < arrayOne.Length)
+        {
+            result[k] = arrayOne[i];
+            i++;
+            k++;
+        }
+
+        // j is still at index 4, which is less than arrayTwo.Length, so we continue 
+        while (j < arrayTwo.Length)
+        {
+            result[k] = arrayTwo[j];
+            j++;
+            k++;
+        }
+
+        return result;
     }
 
     static void Main(string[] args)
@@ -53,7 +86,8 @@
         getDuplicateIntegers(duplicatesArray);
 
         int[] mergeArrayOne = { 1, 2, 3, 4, 5 };
-        int[] mergeArrayTwo = { 2, 5, 7, 9, 13 };
-        mergeArray(mergeArrayOne, mergeArrayTwo);
+        int[] mergeArrayTwo = { 2, 5, 7, 9, 13, 16, 19 };
+        int[] mergedSortedArray = mergeArray(mergeArrayOne, mergeArrayTwo);
+        Console.WriteLine($"Merged sorted array is: {string.Join(" ", mergedSortedArray)}");
     }
 }
