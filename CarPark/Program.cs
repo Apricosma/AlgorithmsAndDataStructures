@@ -33,7 +33,7 @@ class Program
 
         foreach(string element in list)
         {
-            carParkDictionary.Add(element, "");
+            carParkDictionary.Add(element, "0");
         }
 
         return carParkDictionary;
@@ -41,8 +41,7 @@ class Program
 
     static bool checkIsEmpty(Dictionary<string, string> carPark, string key)
     {
-        string value;
-        if(carPark.TryGetValue(key, out value))
+        if (carPark[key] == "0")
         {
             return true;
         } else
