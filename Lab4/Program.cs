@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 class Program
 {
@@ -27,7 +28,12 @@ class Program
         testList.Add(new List<int> { 9, 7, 3, -2 });
         testList.Add(new List<int> { 2, 1, 2 });
 
-        Console.WriteLine(string.Join(", ", MaxNumbersInLists(testList)));
+        
+        List<int> maxList = MaxNumbersInLists(testList);
+        for (int i = 0; i < maxList.Count; i++)
+        {
+            Console.WriteLine($"List {i+1} has a maximum number of: {maxList[i]}");
+        }
         
     }
 
