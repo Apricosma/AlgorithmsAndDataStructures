@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Text.RegularExpressions;
 
 class Program
 {
@@ -41,13 +42,38 @@ class Program
 
     static bool checkIsEmpty(Dictionary<string, string> carPark, string key)
     {
-        if (carPark[key] == "0")
+        try
         {
-            return true;
-        } else
+            if (carPark[key] == "0")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        } catch (KeyNotFoundException ex)
         {
+            Console.WriteLine("Lot not found");
             return false;
         }
+    }
+
+    static void printLot(Dictionary<string, string> lot) {
+        StringBuilder sb = new StringBuilder();
+        int counter = 0;
+
+        foreach(var element in lot)
+        {
+            sb.Append($"{element.Key.PadRight(1)}:{element.Value.PadRight(6)} | ");
+            counter++;
+            if (counter % 10 == 0)
+            {
+                sb.Append(Environment.NewLine);
+            }
+        }
+        Console.WriteLine(sb.ToString());
+        
     }
 
 
@@ -61,22 +87,47 @@ class Program
 
         Dictionary<string, string> carPark = getCarParkOccupancy(carParkList);
 
-        
-        Console.WriteLine(String.Join(", ", carPark));
-        Console.WriteLine("Select the lot you want: ");
 
-        string lotSelection = Console.ReadLine().ToUpper();
-        
-        if (checkIsEmpty(carPark, lotSelection))
+        ConsoleKey quit = ConsoleKey.Q;
+        while (true)
         {
-            Console.WriteLine("Please input your license (six letters)");
-            string license = Console.ReadLine().ToUpper();
-            string keyToChange = lotSelection;
-            string newKeyValue = license;
-            carPark.Remove(keyToChange);
-            carPark.Add(keyToChange, newKeyValue);
+            //Console.WriteLine(String.Join(" ", carPark.Select(kvp => $"{kvp.Key} : {kvp.Value} |")));
+            printLot(carPark);
+            Console.WriteLine("Select the lot you want: (Q to quit)");
+            string lotSelection;
+            while (true)
+            {
+                lotSelection = Console.ReadLine().ToUpper();
+                if (Regex.IsMatch(lotSelection, @"[A-Z][0-9]") || lotSelection == quit.ToString())
+                {
+                    break;
+                } else
+                {
+                    Console.WriteLine("Please input correct format (eg. C7)");
+                }
+            }
 
-            Console.WriteLine(checkIsEmpty(carPark, lotSelection));
+            if (lotSelection == quit.ToString())
+            {
+                break;
+            } else
+            {
+                if (checkIsEmpty(carPark, lotSelection))
+                {
+                    Console.WriteLine("Please input your license (six letters)");
+                    string license = Console.ReadLine().ToUpper();
+                    string keyToChange = lotSelection;
+                    string newKeyValue = license;
+                    carPark.Remove(keyToChange);
+                    carPark.Add(keyToChange, newKeyValue);
+                }
+                else
+                {
+                    Console.WriteLine("Lot not found or lot is occupied, please try again (submit any key to continue)");
+                    lotSelection = Console.ReadLine().ToUpper();
+                }
+            }
+
         }
     }
 }
