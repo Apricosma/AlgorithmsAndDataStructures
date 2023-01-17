@@ -59,8 +59,37 @@ class Program
          *      }
          * }
          */
+        bool isSorted = true;
+        int tempNo;
 
-        
+        // since this is O(n^2), I think we should check if the list is even sorted to begin with
+        // This might be redundant? 
+        for (int i = 1; i < list.Count - 1; i++)
+        {
+            if (list[i - 1] > list[i])
+            { 
+                isSorted = false;
+                break;
+            }
+        }
+
+        // O(n^2) time complexity
+        while (!isSorted) {
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                for (int j = 0; j < list.Count - i - 1; j++)
+                {
+                    if (list[j] > list[j + 1])
+                    {
+                        tempNo = list[j];
+                        list[j] = list[j + 1];
+                        list[j + 1] = tempNo;
+                    }
+                }
+            }
+            isSorted = true;
+        }
+
         return list;
     }
 
@@ -89,7 +118,7 @@ class Program
 
         Console.WriteLine(HighestGrade(grades));
 
-        List<int> loopList = new List<int> { 6, -2, 5, 3 };
+        List<int> loopList = new List<int> { 6, -2, 5, 3, 2, 16, 3, 281, 34, 128, -50, -123 };
         Console.WriteLine(string.Join(", ", OrderByLooping(loopList)));
     }
 
