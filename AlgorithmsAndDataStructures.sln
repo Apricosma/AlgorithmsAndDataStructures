@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalizeFirstLettersOfStr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab3", "Lab3\Lab3.csproj", "{F6C7A34B-959C-48D2-8589-3BD2970CE865}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lists", "Lists\Lists.csproj", "{F5BFEBFD-8916-4D11-8310-1AABA0919A96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lists", "Lists\Lists.csproj", "{F5BFEBFD-8916-4D11-8310-1AABA0919A96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSets", "HashSets\HashSets.csproj", "{4232E29F-F841-462F-9807-7074637A8399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashSets", "HashSets\HashSets.csproj", "{4232E29F-F841-462F-9807-7074637A8399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPark", "CarPark\CarPark.csproj", "{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{4232E29F-F841-462F-9807-7074637A8399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4232E29F-F841-462F-9807-7074637A8399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4232E29F-F841-462F-9807-7074637A8399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
