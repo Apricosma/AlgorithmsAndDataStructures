@@ -35,9 +35,33 @@ class Program
     }
 
     // order a list of integers from least to greatest using only basic control statements
-    static List<int> OrderByLooping(List<int> inputList)
+    static List<int> OrderByLooping(List<int> list)
     {
+        /*
+         * bool isSorted;
+         * 
+         * check if the list is sorted to begin with?
+         * for (i = 1; i < list.Count; i++ {
+         *     if ( previous > current )
+         *          false
+         * }
+         * 
+         * while (!isSorted) 
+         * {
+         *      for (int i = 0; i < list.Count; i++ {
+         *      
+         *          for (int j = 0; j < list.Count - i; j++ {
+         *              
+         *              if ( current > next ) { 
+         *                  swap
+         *              }  
+         *          }
+         *      }
+         * }
+         */
 
+        
+        return list;
     }
 
     static void Main(string[] args)
@@ -64,6 +88,9 @@ class Program
         };
 
         Console.WriteLine(HighestGrade(grades));
+
+        List<int> loopList = new List<int> { 6, -2, 5, 3 };
+        Console.WriteLine(string.Join(", ", OrderByLooping(loopList)));
     }
 
 }
