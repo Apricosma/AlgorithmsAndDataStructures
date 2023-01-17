@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq.Expressions;
+
 
 class Program
 {
@@ -17,14 +17,20 @@ class Program
         {
             maxIntList.Add(GetHighestValueInList(list));
         }
-
+        // returns a brand new list with a single value from each list
+        // O(n) 
         return maxIntList;
     }
 
     static String HighestGrade(List<List<int>> inputList)
     {
-        int maxGrade = MaxNumbersInLists(inputList).Max();
-        string outputString = $"The highest grade is: {maxGrade.ToString()}";
+        List<int> maxGrades = MaxNumbersInLists(inputList);
+        Console.WriteLine(String.Join(", ", maxGrades));
+        int index = maxGrades.IndexOf(maxGrades.Max()) + 1;
+        
+        string outputString = $"The highest grade is: {maxGrades.Max().ToString()} it was found in class: {index}";
+       
+        // O(n)
         return outputString;
     }
 
