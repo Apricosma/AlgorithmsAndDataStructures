@@ -25,7 +25,6 @@ class Program
     static String HighestGrade(List<List<int>> inputList)
     {
         List<int> maxGrades = MaxNumbersInLists(inputList);
-        Console.WriteLine(String.Join(", ", maxGrades));
         int index = maxGrades.IndexOf(maxGrades.Max()) + 1;
         
         string outputString = $"The highest grade is: {maxGrades.Max().ToString()} it was found in class: {index}";
@@ -84,9 +83,10 @@ class Program
         List<int> maxList = MaxNumbersInLists(testList);
         for (int i = 0; i < maxList.Count; i++)
         {
-            Console.WriteLine($"List {i+1} has a maximum number of: {maxList[i]}");
+            Console.WriteLine($"List {i + 1} has a maximum number of: {maxList[i]}");
         }
 
+        Console.WriteLine();
         List<List<int>> grades = new List<List<int>>
         {
             new List<int> { 85, 92, 67, 94, 94 },
@@ -96,8 +96,10 @@ class Program
 
         Console.WriteLine(HighestGrade(grades));
 
+        Console.WriteLine();
         List<int> loopList = new List<int> { 6, -2, 5, 3 };
-        Console.WriteLine(string.Join(", ", OrderByLooping(loopList)));
+        Console.WriteLine($"The input list is: {String.Join(", ", loopList)}");
+        Console.WriteLine("The sorted list is: " + string.Join(", ", OrderByLooping(loopList)));
     }
 
 }
