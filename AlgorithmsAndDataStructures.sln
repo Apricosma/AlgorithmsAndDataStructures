@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz", "FizzBuzz\FizzBu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapitalizeFirstLettersOfStrings", "CapitalizeFirstLettersOfStrings\CapitalizeFirstLettersOfStrings.csproj", "{C27E5285-8D7C-4864-9FA4-15BE2BA9E4CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "Lab3\Lab3.csproj", "{F6C7A34B-959C-48D2-8589-3BD2970CE865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab3", "Lab3\Lab3.csproj", "{F6C7A34B-959C-48D2-8589-3BD2970CE865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lists", "Lists\Lists.csproj", "{F5BFEBFD-8916-4D11-8310-1AABA0919A96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F6C7A34B-959C-48D2-8589-3BD2970CE865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6C7A34B-959C-48D2-8589-3BD2970CE865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C7A34B-959C-48D2-8589-3BD2970CE865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BFEBFD-8916-4D11-8310-1AABA0919A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BFEBFD-8916-4D11-8310-1AABA0919A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BFEBFD-8916-4D11-8310-1AABA0919A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BFEBFD-8916-4D11-8310-1AABA0919A96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
