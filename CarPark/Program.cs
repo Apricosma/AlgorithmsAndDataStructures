@@ -27,29 +27,31 @@ class Program
         return carPark;
     }
 
-    static Dictionary<string, int> getCarParkOccupancy(List<string> list) {
+    static Dictionary<string, string> getCarParkOccupancy(List<string> list) {
 
-        Dictionary<string, int> carParkDictionary = new Dictionary<string, int>();
+        Dictionary<string, string> carParkDictionary = new Dictionary<string, string>();
 
         foreach(string element in list)
         {
-            carParkDictionary.Add(element, 0);
+            carParkDictionary.Add(element, "");
         }
 
         return carParkDictionary;
     }
 
-    static bool checkIsEmpty(Dictionary<string, int> carPark, string key)
+    static bool checkIsEmpty(Dictionary<string, string> carPark, string key)
     {
-        int value;
+        string value;
         if(carPark.TryGetValue(key, out value))
         {
-            return value == 0;
+            return true;
         } else
         {
             return false;
         }
     }
+
+
 
     static void Main(string[] args)
     {
@@ -58,12 +60,24 @@ class Program
         Console.WriteLine(String.Join(", ", createCarPark(parkSizeInput)));
         List<string> carParkList = createCarPark(parkSizeInput);
 
-        Dictionary<string, int> carPark = getCarParkOccupancy(carParkList);
+        Dictionary<string, string> carPark = getCarParkOccupancy(carParkList);
 
         
         Console.WriteLine(String.Join(", ", carPark));
-        Console.WriteLine("Select the lot you want");
+        Console.WriteLine("Select the lot you want: ");
 
-        Console.WriteLine(checkIsEmpty(carPark, Console.ReadLine()));
+        string lotSelection = Console.ReadLine().ToUpper();
+        
+        if (checkIsEmpty(carPark, lotSelection))
+        {
+            Console.WriteLine("Please input your license (six letters)");
+            string license = Console.ReadLine().ToUpper();
+            string keyToChange = lotSelection;
+            string newKeyValue = license;
+            carPark.Remove(keyToChange);
+            carPark.Add(keyToChange, newKeyValue);
+
+            Console.WriteLine(checkIsEmpty(carPark, lotSelection));
+        }
     }
 }
