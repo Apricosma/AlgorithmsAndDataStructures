@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifoKitchen", "FifoKitchen\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentMockup", "AssessmentMockup\AssessmentMockup.csproj", "{08D0B665-9E2F-4B87-90D1-00809A8C5C90}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab4", "Lab4\Lab4.csproj", "{FD7408B8-87D4-4114-BE74-DA27626E93F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD7408B8-87D4-4114-BE74-DA27626E93F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7408B8-87D4-4114-BE74-DA27626E93F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7408B8-87D4-4114-BE74-DA27626E93F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7408B8-87D4-4114-BE74-DA27626E93F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
