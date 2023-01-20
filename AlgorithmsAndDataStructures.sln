@@ -17,7 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lists", "Lists\Lists.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashSets", "HashSets\HashSets.csproj", "{4232E29F-F841-462F-9807-7074637A8399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPark", "CarPark\CarPark.csproj", "{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarPark", "CarPark\CarPark.csproj", "{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StacksandQueues", "StacksandQueues\StacksandQueues.csproj", "{B10F4800-891D-4F3C-8455-7701F509A840}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FifoKitchen", "FifoKitchen\FifoKitchen.csproj", "{A50A24E3-08DA-4726-8071-6FF494A8151B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssessmentMockup", "AssessmentMockup\AssessmentMockup.csproj", "{08D0B665-9E2F-4B87-90D1-00809A8C5C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +63,18 @@ Global
 		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EB35431-A2C3-42EC-BCAB-25B7E84834FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B10F4800-891D-4F3C-8455-7701F509A840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10F4800-891D-4F3C-8455-7701F509A840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10F4800-891D-4F3C-8455-7701F509A840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10F4800-891D-4F3C-8455-7701F509A840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A50A24E3-08DA-4726-8071-6FF494A8151B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50A24E3-08DA-4726-8071-6FF494A8151B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50A24E3-08DA-4726-8071-6FF494A8151B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50A24E3-08DA-4726-8071-6FF494A8151B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D0B665-9E2F-4B87-90D1-00809A8C5C90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

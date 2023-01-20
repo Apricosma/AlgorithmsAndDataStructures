@@ -54,7 +54,6 @@ class Program
             }
         } catch (KeyNotFoundException ex)
         {
-            Console.WriteLine("Lot not found");
             return false;
         }
     }
@@ -80,9 +79,9 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.WriteLine("Input the size of the car park");
+        Console.WriteLine("Input the size of the car park (Max 260)");
         int parkSizeInput = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(String.Join(", ", createCarPark(parkSizeInput)));
+        
         List<string> carParkList = createCarPark(parkSizeInput);
 
         Dictionary<string, string> carPark = getCarParkOccupancy(carParkList);
@@ -91,7 +90,6 @@ class Program
         ConsoleKey quit = ConsoleKey.Q;
         while (true)
         {
-            //Console.WriteLine(String.Join(" ", carPark.Select(kvp => $"{kvp.Key} : {kvp.Value} |")));
             printLot(carPark);
             Console.WriteLine("Select the lot you want: (Q to quit)");
             string lotSelection;
@@ -127,7 +125,6 @@ class Program
                     lotSelection = Console.ReadLine().ToUpper();
                 }
             }
-
         }
     }
 }
